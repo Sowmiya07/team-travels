@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.head-bar {
+    padding: 15px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    margin-bottom: 15px;
+}
+
+.heading-1 {
+    color: #1A368B;
+}
+
+.heading-2 {
+    color: #FC4004;
+}
+
+.nav-list, .icon-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-list {
+    justify-content: space-evenly;
+    padding: 10px;
+    outline: 0;
+}
+
+.icon-list {
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.icon {
+    color: #FC4004;
+    font-size: 22px;
+}
+
+.icon-list li {
+    margin-right: 40px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #1A368B;
+    font-size: 18px;
+}
+
+.nav-list li a:hover {
+    border-bottom: 2px solid #FC4004;
+    font-size: 20px;
+}
+
+.head-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+/* Home Page Styles */
+.homepage {
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.home-part-1 {
+    width: 50%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-part-2 {
+    width: 50%;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tagline {
+    font-size: 35px;
+    padding: 10px;
+}
+
+.enquire-btn {
+    background-color: #FC4004;
+    border: 0;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 8px 6px -6px black;
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* About Page Styles */
+.aboutpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#F8F8F8;
+    height: 75vh;
+}
+
+.about-title, .service-title {
+    color: #FC4004;
+    font-size: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    font-size: 20px;
+    width: 75%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Service Page Styles */
+.servicepage {
+    margin-top: 15px;
+    height: 75vh;
+    margin-bottom: 15px;
+}
+
+.service-title {
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    width: 20%;
+    height: 200px;
+    padding: 10px;
+    background-color: #F8F8F8;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    height: 100px;
+    width: 100px;
+}
