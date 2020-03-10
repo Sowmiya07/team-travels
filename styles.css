@@ -1,12 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-.head-bar {
-    padding: 15px;
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
-    margin-bottom: 15px;
+    font-family: 'Muli', sans-serif;
 }
 
 .heading-1 {
@@ -15,6 +14,15 @@
 
 .heading-2 {
     color: #FC4004;
+}
+
+.head-bar {
+    padding: 15px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-gap: 30px;
 }
 
 .nav-list, .icon-list {
@@ -36,10 +44,11 @@
 .icon {
     color: #FC4004;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .icon-list li {
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .nav-list a {
@@ -50,43 +59,47 @@
 
 .nav-list li a:hover {
     border-bottom: 2px solid #FC4004;
-    font-size: 20px;
-}
-
-.head-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+    font-weight: bold;
 }
 
 /* Home Page Styles */
 .homepage {
-    height: 75vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .home-part-1 {
     width: 50%;  
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-left: 75px;
 }
 
 .home-part-2 {
     width: 50%;
+    padding-right: 25px;
 }
 
 .main-image {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .tagline {
-    font-size: 35px;
-    padding: 10px;
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #4d4d4d;
+}
+
+.sub-tagline {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #4d4d4d;
 }
 
 .enquire-btn {
@@ -97,30 +110,30 @@
     border-radius: 5px;
     box-shadow: 0 8px 6px -6px black;
     margin-top: 15px;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 1px;
 }
 
 /* About Page Styles */
-.aboutpage {
+.aboutpage, .contactpage {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color:#F8F8F8;
-    height: 75vh;
+    /* min-height: 75vh; */
 }
 
-.about-title, .service-title {
+.title {
     color: #FC4004;
-    font-size: 40px;
+    font-size: 35px;
     padding: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 15px 0px;
+    text-align: center;
 }
 
 .about-content {
-    font-size: 20px;
+    font-size: 18px;
     width: 75%;
     text-align: center;
     line-height: 1.5;
@@ -129,12 +142,8 @@
 /* Service Page Styles */
 .servicepage {
     margin-top: 15px;
-    height: 75vh;
+    min-height: 75vh;
     margin-bottom: 15px;
-}
-
-.service-title {
-    text-align: center;
 }
 
 .service-container {
@@ -143,6 +152,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .service {
@@ -155,11 +165,105 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.1);
 }
 
 .service-icon {
     height: 100px;
     width: 100px;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.contact-content {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Media queries */
+@media screen and (min-width: 751px) and (max-width: 1000px) {
+   .icon-list {
+       display: none;
+   }
+
+   .head-bar {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .tagline {
+        font-size: 32px;
+    }
+
+    .sub-tagline {
+        font-size: 18px;
+    }
+
+    .enquire-btn {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 750px) {
+   .nav-list {
+       display: none;
+   }
+}
+
+@media screen and (max-width: 550px) {
+   .head-bar {
+        display: block;
+        text-align: center;
+   }
+
+    .nav-list {
+       display: none;
+   }
+
+   .icon-list {
+       display: none;
+   }
+}
+
+@media screen and (max-width: 750px) {
+    .homepage {
+        margin-top: 25px;
+    }
+
+    .home-part-1 {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .home-part-2 {
+        width: 100%;
+    }
+
+    .tagline {
+        font-size: 30px;
+    }
+
+    .sub-tagline, .enquire-btn {
+        font-size: 18px;
+    }
+
+    .about-content {
+        font-size: 15px;
+    }
 }
